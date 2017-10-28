@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        startNewRound()
+        startNewGame()
         updateLabels()
     }
 
@@ -32,20 +32,38 @@ class ViewController: UIViewController {
 
     @IBAction func showAlert() {
         let difference = abs(targetValue - currentValue)
-        let points = 100 - difference
+        var points = 100 - difference
+
+        if(difference == 0) {
+            points += 100
+        }
 
         score += points
         
         let message = "You scored \(points) points"
-        let alert  = UIAlertController(title: "Hello, World", message: message,
+        let alert  = UIAlertController(title: getTitle(difference), message: message,
                                        preferredStyle: .alert)
 
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let action = UIAlertAction(title: "OK", style: .default, handler: { action in self.startNewRound()
+            self.updateLabels()})
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
 
-        startNewRound()
-        updateLabels()
+    }
+
+    func getTitle(_ difference: Int) -> String {
+        var title = ""
+        switch difference {
+        case 0:
+            title = "Perfect"
+        case 1..<9:
+            title = "Really close"
+        case 10..<25:
+            title = "Close"
+        default:
+            title = "Not even close"
+        }
+        return title
     }
 
     @IBAction func sliderMoved(_ slider: UISlider) {
@@ -63,6 +81,17 @@ class ViewController: UIViewController {
         target.text = String(targetValue)
         scoreLabel.text = String(score)
         roundLabel.text = String(round)
+    }
+
+    func startNewGame() {
+        round = 0
+        score = 0
+        startNewRound()
+    }
+
+    @IBAction func startOver(_ sender: Any) {
+        startNewGame()
+        updateLabels()
     }
 }
 
