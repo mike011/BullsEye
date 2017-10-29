@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C39F68A1FA60AEA00ECCF72 /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = 4C39F6891FA60AEA00ECCF72 /* BullsEye.html */; };
 		4C827D221FA4BC9500F9473D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C827D211FA4BC9500F9473D /* AppDelegate.swift */; };
 		4C827D241FA4BC9500F9473D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C827D231FA4BC9500F9473D /* ViewController.swift */; };
 		4C827D271FA4BC9500F9473D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C827D251FA4BC9500F9473D /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C39F6891FA60AEA00ECCF72 /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BullsEye.html; sourceTree = "<group>"; };
 		4C827D1E1FA4BC9500F9473D /* BullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C827D211FA4BC9500F9473D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C827D231FA4BC9500F9473D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		4C827D201FA4BC9500F9473D /* BullsEye */ = {
 			isa = PBXGroup;
 			children = (
+				4C39F6891FA60AEA00ECCF72 /* BullsEye.html */,
 				4C827D211FA4BC9500F9473D /* AppDelegate.swift */,
 				4C827D231FA4BC9500F9473D /* ViewController.swift */,
 				4C827D331FA5304C00F9473D /* AboutViewController.swift */,
@@ -127,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C827D2C1FA4BC9500F9473D /* LaunchScreen.storyboard in Resources */,
+				4C39F68A1FA60AEA00ECCF72 /* BullsEye.html in Resources */,
 				4C827D291FA4BC9500F9473D /* Assets.xcassets in Resources */,
 				4C827D271FA4BC9500F9473D /* Main.storyboard in Resources */,
 			);
